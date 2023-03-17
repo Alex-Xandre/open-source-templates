@@ -56,7 +56,7 @@ const Appbar = () => {
 
   return (
     <nav
-      className={` flex flex-wrap w-full z-40 fixed top-0 bg-white justify-between items-center min-h-18 pt-2 lg:!px-36 ${
+      className={` flex flex-wrap w-full z-20 fixed top-0 bg-white justify-between items-center min-h-18 pt-2 lg:!px-36 ${
         navbar && "shadow-lg" 
       }`}
     >

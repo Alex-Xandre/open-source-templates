@@ -4,11 +4,13 @@ import Home from "./layout/Home";
 
 export default function App() {
   return (
-    <div className="">
+    <>
       <Appbar />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-      </Routes>
-    </div>
+      <div className="overflow-hidden">
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </>
   );
 }
