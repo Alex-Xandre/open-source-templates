@@ -5,8 +5,9 @@ import Home from "./layout/Home";
 export default function App() {
   return (
     <>
-      <Appbar />
+    
       <div className="overflow-hidden">
+      <Appbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
         </Routes>
