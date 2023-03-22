@@ -33,7 +33,7 @@ const Footer = () => {
   ];
   const navigate = useNavigate();
   return (
-    <footer className="flex w-full justify-between bg-sky-50 relative px-4 py-10 lg:px-40 ">
+    <footer className="flex w-full justify-between bg-white relative px-4 py-10 lg:px-40 ">
       {/* <div className="h-[1px] w-full border border-black "></div> */}
       <h1 className=" cursor-pointer " onClick={() => navigate("/")}>
         Xandre
@@ -47,7 +47,7 @@ const Footer = () => {
               href={x.url}
               target="_blank"
               rel="noreferrer"
-              className="oapcity-80 hover:bg-white hover:opacity-100 h-fit rounded p-[2px]"
+              className="oapcity-80 hover:bg-sky-50 hover:opacity-100 h-fit rounded p-[2px]"
             >
               {x.ic}
             </a>
