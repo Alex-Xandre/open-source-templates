@@ -35,7 +35,7 @@ const Experience = () => {
       <section className="min-h-[calc(100vh-80px)] bg-gray-50 relative mt-10 lg:mt-20  pb-10 lg:px-40 pt-36 lg:pt-2 ">
         <Title title="Timeline" cN=" top-2 text-[50px] md:top-12 lg:top-10" />
         <div className="lg:mt-24 mt-10 flex flex-wrap mx-4 lg:mx-2">
-          <h1 className="text-xl -mt-20 lg:-mt-3">
+        <h1 className="text-xl md:-mt-10 -mt-20 lg:mt-3">
             Hello ! Here are my timeline and experience for the past few years.
           </h1>
         </div>
