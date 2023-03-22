@@ -6,10 +6,10 @@ const Appbar = () => {
   const Menu = [
     { title: "About", url: "/about" },
     { title: "Projects", url: "/projects" },
-    { title: "Services", url: "/services" },
+    // { title: "Services", url: "/services" },
     { title: "Experience", url: "/experience" },
     { title: "Contact", url: "/contact" },
-    { title: "Components", url: "/components" },
+    // { title: "Components", url: "/components" },
   ];
 
   const [navbar, setNavbar] = React.useState(false);
@@ -54,27 +54,33 @@ const Appbar = () => {
     navigate(Menu[i].url);
   };
 
+  const navigateHome = () =>{
+    setMenu(false)
+    navigate('/')
+  }
   return (
     <nav
-      className={` flex flex-wrap w-full z-20 fixed top-0 bg-white justify-between items-center min-h-18 pt-2 lg:!px-36 ${
-        navbar && "shadow-lg" 
+      className={` flex flex-wrap w-full z-50 fixed top-0 bg-white justify-between items-center min-h-18 py-2 lg:!px-36 ${
+        navbar && "shadow-lg"
       }`}
     >
       <div className="z-20 pl-4 font-semibold flex ">
         <div onClick={handleThemeSwitch} className="cursor-pointer">
           {theme === "light" ? <SunIcon /> : <MoonIcon />}
         </div>
-        <h2 className="ml-2"> Xandre</h2>
+        <h2 className="ml-2" onClick={()=>navigateHome()}>
+         Xandre
+        </h2>
       </div>
 
       <div
         className={`m-0 px-2 md:hidden z-20 w-fit h-fit rounded`}
         onClick={() => setMenu(!menu)}
       >
-        {!menu ? <MenuIcon  /> : <CloseIcon />}
+        {!menu ? <MenuIcon /> : <CloseIcon />}
       </div>
       <ul
-        className={`w-full left-0 p-0 absolute top-0  px-4 pt-12 pb-8  bg-white rounded ${
+        className={`w-full md:w-9/12 left-0 p-0 absolute top-0  px-4 pt-12 pb-8  bg-white rounded ${
           menu ? "" : "hidden"
         } md:flex md:w-6/12 md:flex-row md:h-full md:p-0 md:pt-3  md:relative md:justify-center`}
       >
