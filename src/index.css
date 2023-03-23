@@ -5,7 +5,7 @@
 * {
   max-width: 2000px;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family:  sans-serif !important;
 }
 
 .img-box:hover div {
