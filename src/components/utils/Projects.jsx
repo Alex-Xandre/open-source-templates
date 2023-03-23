@@ -59,8 +59,6 @@ const Projects = (props) => {
             <a
               href={web_link}
               target="_blank"
-              onClick={()=>alert
-              ("hi")}
               rel="noopener noreferrer"
               className="hover:underline"
             >
