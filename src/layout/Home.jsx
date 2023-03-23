@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "../components/Button";
 import Title from "../components/utils/Title";
 import bg from "../assets/bg.png";
@@ -24,21 +24,21 @@ export const projectData = [
   {
     title: "Dapstone",
     banner:
-      "https://res.cloudinary.com/dfhhkd04c/image/upload/v1679296986/proj_1_qtuxej.png",
+      "https://res.cloudinary.com/dfhhkd04c/image/upload/v1679543369/proj-4-removebg-preview_1_jtroga.png",
     description: "React, Tailwind, Vite",
     web_link: "https://www.dapstone.com/",
   },
   {
     title: "BarkMeows",
     banner:
-      "https://res.cloudinary.com/dfhhkd04c/image/upload/v1670827844/barkmeow_wlww5s.png",
+      "https://res.cloudinary.com/dfhhkd04c/image/upload/v1679543375/barkmeow_wlww5s-removebg-preview_qi4axf.png",
     description: "React, CSS",
     web_link: "https://bark-meow-heroes.vercel.app/",
   },
   {
     title: "Broke Boys Club",
     banner:
-      "https://res.cloudinary.com/dfhhkd04c/image/upload/v1670828999/broke_tg9hlr.png",
+      "https://res.cloudinary.com/dfhhkd04c/image/upload/v1679543371/broke_tg9hlr-removebg-preview_jv54me.png",
     description: "React, CSS",
     web_link: "https://www.brokeboysclubnft.com/",
   },
@@ -53,9 +53,17 @@ export const projectData = [
   {
     title: "Old Portfolio",
     banner:
-      "https://res.cloudinary.com/dfhhkd04c/image/upload/v1670829315/port_ofih1d.png",
+      "https://res.cloudinary.com/dfhhkd04c/image/upload/v1679543458/port_ofih1d-removebg-preview_gjhhqe.png",
     description: "React, CSS",
     repo: "https://github.com/Alex-Xandre/portfolio-v2",
+  },
+
+  {
+    title: "This Website",
+    banner:
+      "https://res.cloudinary.com/dfhhkd04c/image/upload/v1679543458/port_ofih1d-removebg-preview_gjhhqe.png",
+    description: "React, CSS",
+    repo: "https://github.com/Alex-Xandre/open-source-templates",
     web_link: "https://alexandermicua.vercel.app/",
   },
 ];
@@ -63,23 +71,28 @@ export const projectData = [
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-screen mt-10  z-10 bg-gray-50 relative h-full  scrollbar-hide ">
+    <div className="w-screen mt-10  z-10 bg-gray-50 dark:bg-zinc-900 relative h-full  scrollbar-hide ">
       <section className=" w-full relative  h-[calc(100vh-80px)] lg:mt-20 lg:px-40 flex flex-col lg:flex-row ">
         <div className="w-full lg:w-6/12 flex justify-center align-center flex-col h-full px-4 lg:px-0">
-          <h2 className="text-2xl lg:text-3xl font-semibold py-1">
+          <h2 className="text-2xl lg:text-3xl font-semibold py-1 dark:text-white">
             Hi, <span className="font-normal">You can call me Xandre</span>
           </h2>
-          <h2 className="text-xl lg:text-2xl py-1">
+          <h2 className="text-xl py-1 dark:text-white">
             <span className="font-semibold">Software Engineer</span> and
             Freelancer{" "}
           </h2>
           {/* <h3>Software Engineer x Xcrypt Aces Head Developer</h3> */}
-          <h3 className="py-1 text-gray-900">Kaizen/改善 | Stoic</h3>
+          <h3 className="py-1 text-gray-900 dark:text-gray-100">
+            Kaizen/改善 | Stoic
+          </h3>
           <div className="flex py-4">
-            <Button text="Hire A Freelancer" />
+            <Button
+              text="Hire A Freelancer"
+              cN="dark:bg-zinc-700 opacity-90 hover:opacity-100"
+            />
             <Button
               text="Show Projects"
-              cN="!bg-gray-200 !text-black hover:!gray-400 ml-2"
+              cN="!bg-gray-200 !text-black hover:!gray-400 ml-2 opacity-90 hover:opacity-100"
             />
           </div>
         </div>
@@ -92,7 +105,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className=" bg-white relative my-20 lg:px-40 pt-36 lg:pt-2">
+      <section className=" bg-white dark:bg-zinc-900 relative mt-20 pb-10 lg:px-40 pt-36 lg:pt-2">
         <Title title="Highlight Projects" />
         <h3
           className="flex p-2 rounded  text-sm w-fit m-4 lg:m-0 lg:mt-3 bg-gray-200 !text-black hover:!gray-400 cursor-pointer"
@@ -127,6 +140,7 @@ const Home = () => {
                   banner={x.banner}
                   title={x.title}
                   description={x.description}
+                  web_link={x.web_link}
                 />
               </div>
             );

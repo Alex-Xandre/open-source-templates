@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Appbar from "./components/Appbar";
+import ScrollTop from "./components/utils/scrollTop";
 import About from "./layout/About";
 import Contact from "./layout/Contact";
 import Experience from "./layout/Experience";
@@ -12,14 +13,16 @@ export default function App() {
     <>
       <div className="overflow-hidden z">
         <Appbar />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/experience" element={<Experience />} />
-          <Route exact path="/projects" element={<Project />} />
-          <Route exact path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer/>
+        <ScrollTop>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/about" element={<About />} />
+            <Route exact path="/experience" element={<Experience />} />
+            <Route exact path="/projects" element={<Project />} />
+            <Route exact path="/contact" element={<Contact />} />
+          </Routes>
+        </ScrollTop>
+        <Footer />
       </div>
     </>
   );

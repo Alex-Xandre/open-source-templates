@@ -96,16 +96,16 @@ export const socials = [
 ];
 const About = () => {
   return (
-    <div className="w-screen mt-10  z-10 bg-gray-50 ">
-      <section className="min-h-[calc(100vh-80px)] bg-gray-50 relative mt-10 lg:mt-20  pb-10 lg:px-40 pt-36 lg:pt-2">
+    <div className="w-screen mt-10  z-10 bg-gray-50 dark:bg-zinc-900">
+      <section className="min-h-[calc(100vh-80px)] bg-gray-50 dark:bg-zinc-900 relative mt-10 lg:mt-20  pb-10 lg:px-40 pt-36 lg:pt-2">
         <Title title="About " cN=" top-2 text-[50px] md:top-12 lg:top-10" />
 
         <div className="lg:mt-24 mt-10 flex flex-wrap mx-4 lg:mx-2">
-        <h1 className="text-xl md:-mt-10 -mt-20 lg:mt-3">
+          <h1 className="text-xl md:-mt-10 -mt-10 lg:mt-10 dark:text-white">
             Hello ! I am full stack developer specializing in developing
             solutions with MERN Stack Applications.
           </h1>
-          <div className="lg:w-6/12 lg:pr-4">
+          <div className="lg:w-6/12 lg:pr-4 dark:text-gray-100">
             <h2>
               <br />
               As a freelance web and desktop developer, I'm passionate about
@@ -121,7 +121,7 @@ const About = () => {
               have the skills and expertise to bring your vision to life.
             </h2>
 
-            <div className=" w-full flex flex-wrap gap-2">
+            <div className=" w-full flex flex-wrap gap-2 ">
               <h1 className="mt-6 gradient-text text-xl  w-full mb-2">
                 Technology Stacks{" "}
               </h1>
@@ -143,13 +143,13 @@ const About = () => {
             </div>
           </div>
 
-          <div className="lg:w-6/12">
+          <div className="lg:w-6/12  dark:text-gray-100">
             <h1 className="mt-5 gradient-text text-xl pb-2 ">Contact Me</h1>
             <h2>
               If you're looking for a freelance web or desktop developer who can
               help you create high-quality solutions for your business, please
               don't hesitate to reach out. I'm looking forward to hearing from
-              you! or send me a{" "}
+              you! or send me an{" "}
               <span>
                 <a className="underline" href="mailto:xndrmcua22@gmail.com">
                   email.
@@ -174,6 +174,40 @@ const About = () => {
               <h1 className="mt-6 gradient-text text-xl  w-full mb-2">
                 Socials
               </h1>
+              <ul>
+                {socials.map((x, index) => {
+                  return (
+                    <li key={index}>
+                      <a
+                        href={x.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="1.5"
+                          stroke="currentColor"
+                          className="w-6 h-6"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                          />
+                        </svg>
+                        &nbsp; &nbsp;
+                        <span className="after:content-[''] after:block after:w-0 after:h-[2px] after:bg-slate-600 after:transition-all after:ease-in-out hover:after:w-8/12">
+                          {" "}
+                          {x.title}
+                        </span>
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           </div>
         </div>

@@ -33,13 +33,13 @@ const Footer = () => {
   ];
   const navigate = useNavigate();
   return (
-    <footer className="flex w-full justify-between bg-white relative px-4 py-10 lg:px-40 ">
+    <footer className="flex w-full justify-between bg-white relative px-4 py-10 lg:px-40  dark:bg-zinc-800 ">
       {/* <div className="h-[1px] w-full border border-black "></div> */}
-      <h1 className=" cursor-pointer " onClick={() => navigate("/")}>
+      <h1 className=" cursor-pointer dark:text-white font-semibold" onClick={() => navigate("/")}>
         Xandre
       </h1>
 
-      <div className="flex gap-3">
+      <div className="flex gap-2">
         {socials.map((x, index) => {
           return (
             <a
@@ -47,7 +47,7 @@ const Footer = () => {
               href={x.url}
               target="_blank"
               rel="noreferrer"
-              className="oapcity-80 hover:bg-sky-50 hover:opacity-100 h-fit rounded p-[2px]"
+              className="oapcity-80 hover:bg-sky-50 hover:opacity-100 h-fit rounded p-[2px]  dark:hover:bg-zinc-500 dark:text-white"
             >
               {x.ic}
             </a>
