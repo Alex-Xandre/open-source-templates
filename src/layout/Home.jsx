@@ -10,7 +10,7 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <div className="w-screen mt-10  z-10 bg-gray-50 dark:bg-zinc-900 relative h-full  scrollbar-hide ">
-      <section className=" w-full relative  h-[calc(100vh-80px)] lg:mt-20 lg:px-40 flex flex-col lg:flex-row ">
+      <section className=" w-full relative  h-[calc(100vh-80px)] lg:mt-20 lg:px-40 flex flex-col md:flex-row lg:flex-row ">
         <div className="w-full lg:w-6/12 flex justify-center align-center flex-col h-full px-4 lg:px-0">
           <h2 className="text-2xl lg:text-3xl font-semibold py-1 dark:text-white">
             Hi, <span className="font-normal">You can call me Xandre</span>
