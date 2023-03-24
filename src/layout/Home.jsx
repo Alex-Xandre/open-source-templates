@@ -45,7 +45,7 @@ const Home = () => {
           <img
             src={bg}
             alt="main_img"
-            className=" max-w-[400px] md:max-w-[300px] rounded-2xl mx-4 lg:mx-0"
+            className=" lg:max-w-[400px] max-w-[400px] md:max-w-[300px]  rounded-2xl mx-4 lg:mx-0"
           />
         </div>
       </section>
