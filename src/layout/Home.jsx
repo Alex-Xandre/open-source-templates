@@ -10,8 +10,8 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <div className="w-screen mt-10  z-10 bg-gray-50 dark:bg-zinc-900 relative h-full  scrollbar-hide ">
-      <section className=" w-full relative  h-[calc(100vh-80px)] lg:mt-20 lg:px-40 flex flex-col md:flex-row lg:flex-row ">
-        <div className="w-full lg:w-6/12 flex justify-center align-center flex-col  px-4 lg:px-0">
+      <section className=" w-full relative  h-[calc(100vh-80px)] lg:mt-20 lg:px-40 flex flex-col sm:flex-row md:flex-row lg:flex-row ">
+        <div className="w-full lg:w-6/12 flex justify-center align-center h-full flex-col py-10 md:py-0 lg:py-0 px-4 lg:px-0">
           <h2 className="text-2xl lg:text-3xl font-semibold py-1 dark:text-white">
             Hi, <span className="font-normal">You can call me Xandre</span>
           </h2>
@@ -41,16 +41,16 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="w-full lg:w-6/12 flex justify-center align-end flex-col  -mt-20 lg:mt-0">
+        <div className="w-full lg:w-6/12 flex justify-center align-end flex-col h-full  -mt-0 lg:mt-0">
           <img
             src={bg}
             alt="main_img"
-            className=" lg:max-w-[400px] max-w-[400px] md:max-w-[300px]  rounded-2xl mx-4 lg:mx-0"
+            className=" lg:max-w-[400px] max-w-[300px] md:max-w-[300px]  rounded-2xl mx-4 lg:mx-0"
           />
         </div>
       </section>
 
-      <section className=" bg-white dark:bg-zinc-900 relative mt-20 pb-10 lg:px-40 pt-36 lg:pt-2">
+      <section className=" bg-white dark:bg-zinc-900 relative mt-20 pb-10 h-full lg:px-40 pt-36 lg:pt-2">
         <Title title="Highlight Projects" />
         <h3
           className="flex p-2 rounded  text-sm w-fit m-4 lg:m-0 md:-mt-24 lg:mt-3 bg-gray-200 !text-black hover:!gray-400 cursor-pointer"
