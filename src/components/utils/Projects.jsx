@@ -6,7 +6,7 @@ const Projects = (props) => {
   const splitDescription = description.split(", ");
 
   const resDesctription = splitDescription.map((str) => (
-    <p key={str} className="text-sm text-indigo-300">
+    <p key={str} className="text-sm text-indigo-100">
       {" "}
       - {str}
     </p>

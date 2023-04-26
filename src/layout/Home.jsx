@@ -13,15 +13,15 @@ const Home = () => {
       <section className=" w-full relative  h-[calc(100vh-80px)] lg:mt-20 lg:px-40 flex flex-col sm:flex-row md:flex-row lg:flex-row ">
         <div className="w-full lg:w-6/12 flex justify-center align-center h-full flex-col py-10 md:py-0 lg:py-0 px-4 lg:px-0">
           <h2 className="text-2xl lg:text-3xl font-semibold py-1 dark:text-white">
-            Hi, <span className="font-normal">You can call me Xandre</span>
+            Xrypt Aces<span className="font-normal"> Head Developer</span>
           </h2>
-          <h2 className="text-xl py-1 dark:text-white">
+          <h2 className="text-xl py-0 dark:text-white">
             <span className="font-semibold">Software Engineer</span> and
             Freelancer{" "}
           </h2>
           {/* <h3>Software Engineer x Xcrypt Aces Head Developer</h3> */}
           <h3 className="py-1 text-gray-900 dark:text-gray-100">
-            Kaizen/改善 | Stoic
+            A 23-year-old software engineer based in Philippines.
           </h3>
           <div className="flex py-4">
             <a
@@ -53,7 +53,7 @@ const Home = () => {
       <section className=" bg-white dark:bg-zinc-900 relative mt-20 pb-10 h-full lg:px-40 pt-36 lg:pt-2">
         <Title title="Highlight Projects" />
         <h3
-          className="flex p-2 rounded  text-sm w-fit m-4 lg:m-0 md:-mt-24 lg:mt-3 bg-gray-200 !text-black hover:!gray-400 cursor-pointer"
+          className="flex p-2 rounded  text-sm w-fit m-4 lg:m-0 md:-mt-24 lg:mt-3 shadow bg-gray-200 !text-black hover:!gray-400 cursor-pointer"
           onClick={() => navigate("/about")}
         >
           View All{" "}
@@ -78,7 +78,7 @@ const Home = () => {
           {projectData.slice(0, 3).map((x, index) => {
             return (
               <div
-                className="h-[300px] w-[500px] lg:h-[400px] bg-transparent mx-4  lg:mx-0"
+                className="h-[300px] w-[500px] lg:h-[400px] bg-transparent mx- lg:mx-0"
                 key={index}
               >
                 <Projects

@@ -18,7 +18,7 @@ const Project = () => {
             {projectData.map((x, index) => {
               return (
                 <div
-                  className="h-[300px] w-full lg:w-[350px]  bg-transparent mx-0  lg:mx-0"
+                  className="h-[300px] w-full lg:w-[350px]  bg-transparent mx-0 lg:mx-0"
                   key={index}
                 >
                   <Projects
