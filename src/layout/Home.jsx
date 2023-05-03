@@ -13,7 +13,7 @@ const Home = () => {
       <section className=" w-full relative  h-[calc(100vh-80px)] lg:mt-20 lg:px-40 flex flex-col sm:flex-row md:flex-row lg:flex-row ">
         <div className="w-full lg:w-6/12 flex justify-center align-center h-full flex-col py-10 md:py-0 lg:py-0 px-4 lg:px-0">
           <h2 className="text-2xl lg:text-3xl font-semibold py-1 dark:text-white">
-            Xrypt Aces<span className="font-normal"> Head Developer</span>
+            Full Stack<span className="font-normal"> Developer</span>
           </h2>
           <h2 className="text-xl py-0 dark:text-white">
             <span className="font-semibold">Software Engineer</span> and
@@ -50,7 +50,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className=" bg-white dark:bg-zinc-900 relative mt-20 pb-10 h-full lg:px-40 pt-36 lg:pt-2">
+      <section className=" bg-white dark:bg-zinc-900 relative mt-20 pb-10 h-full px-4 lg:px-40 pt-36 lg:pt-2">
         <Title title="Highlight Projects" />
         <h3
           className="flex p-2 rounded  text-sm w-fit m-4 lg:m-0 md:-mt-24 lg:mt-3 shadow bg-gray-200 !text-black hover:!gray-400 cursor-pointer"
