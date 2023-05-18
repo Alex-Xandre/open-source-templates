@@ -2,15 +2,14 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { CloseIcon, MenuIcon, MoonIcon, SunIcon } from "./Icons";
 import moment from "moment";
+import { motion } from "framer-motion";
 
 const Appbar = () => {
   const Menu = [
     { title: "About", url: "/about" },
     { title: "Projects", url: "/projects" },
-    // { title: "Services", url: "/services" },
     { title: "Experience", url: "/experience" },
     { title: "Contact", url: "/contact" },
-    // { title: "Components", url: "/components" },
   ];
 
   const [navbar, setNavbar] = React.useState(false);
@@ -71,7 +70,10 @@ const Appbar = () => {
   };
 
   return (
-    <nav
+    <motion.nav
+    initial={{y:-250}}
+    animate={{y:0}}
+    transition={{delay:0.2}}
       className={` flex flex-wrap w-full z-50 fixed top-0 bg-white justify-between items-center min-h-18 py-2 lg:!px-36 dark:bg-zinc-800 ${
         navbar && "shadow-lg"
       }`}
@@ -105,17 +107,17 @@ const Appbar = () => {
           return (
             <React.Fragment key={index}>
               <li
-                className="py-2 text-gray-800 dark:text-white hover:text-slate-700 dark:hover:text-slate-400 cursor-pointer mx-4 md:mb-2 "
+                className="py-2 text-gray-800 dark:text-white hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer mx-4 md:mb-2 "
                 onClick={() => navigatePage(index)}
               >
                 <a
                   className={`${
                     activeMenu === index
-                      ? "border-b-4 border-slate-700 pb-1"
+                      ? "border-b-4 border-indigo-500 pb-1 text-indigo-500"
                       : ""
                   } ${
                     activeMenu !== index
-                      ? "after:content-[''] after:block after:w-0 after:h-1 after:bg-slate-600 after:transition-all after:ease-in-out hover:after:w-8/12"
+                      ? "after:content-[''] after:block after:w-0 after:h-1 after:bg-indigo-500 after:transition-all after:ease-in-out hover:after:w-8/12"
                       : ""
                   } `}
                 >
@@ -126,7 +128,7 @@ const Appbar = () => {
           );
         })}
       </ul>
-    </nav>
+    </motion.nav>
   );
 };
 

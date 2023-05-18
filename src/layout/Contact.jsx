@@ -1,6 +1,8 @@
 import React from "react";
 import Title from "../components/utils/Title";
 import { socials } from "./About";
+import TitleDescription from "../components/utils/TitleDescription";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
@@ -9,10 +11,14 @@ const Contact = () => {
         <Title title="Contact" cN=" top-2 text-[50px] md:top-12 lg:top-10" />
 
         <div className="lg:mt-24 mt-10 flex flex-wrap mx-4 lg:mx-2">
-          <h1 className="text-xl md:-mt-10 -mt-10 lg:mt-10 dark:text-white">
-            Get in touch, let's talk.
-          </h1>
-          <h2 className="w-full mt-10 lg:-ml-1 dark:text-gray-100">
+          <TitleDescription title="  Get in touch, let's talk." />
+
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.25 }}
+            className="w-full mt-10 lg:-ml-1 dark:text-gray-100"
+          >
             I'm looking forward to hearing from you! or send me an{" "}
             <span>
               <a className="underline" href="mailto:xndrmcua22@gmail.com">
@@ -33,7 +39,7 @@ const Contact = () => {
               </a>
             </span>
             &nbsp; and we can discuss about your project.
-          </h2>
+          </motion.h2>
         </div>
       </section>
     </div>
