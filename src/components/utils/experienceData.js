@@ -7,7 +7,7 @@ export const experienceData = [
   {
     title: "Front End Developer",
     desc: "Performed frontend development tasks and communicated closely with senior software engineers, a company based on Germany",
-    year: "2022 - Present",
+    year: "2022 - 2023",
   },
   {
     title: "Graduation",

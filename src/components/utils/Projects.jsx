@@ -2,7 +2,8 @@ import React from "react";
 import { ArrowRedirectIcon, GithubIcon } from "../Icons";
 
 const Projects = (props) => {
-  const { banner, title, description, web_link, repo } = props;
+  const { banner, title, description, web_link, repo, hover_description } =
+    props;
   const splitDescription = description.split(", ");
 
   const resDesctription = splitDescription.map((str) => (
@@ -14,12 +15,12 @@ const Projects = (props) => {
 
   return (
     <div
-      className="w-full h-full bg-contain bg-center bg-no-repeat  duration-300 ease-in relative img-box hover:opacity-100 hover:scale-105 rounded"
+      className="w-full h-full bg-contain bg-center bg-no-repeat  duration-300 ease-in relative  opacity-80 img-box hover:opacity-100 hover:scale-102 rounded"
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(${banner})`,
       }}
     >
-      <h3 className="text-3xl text-white px-4  pt-3  font-semibold font-sans flex cursor-pointer   w-fit">
+      <h3 className="text-3xl text-white px-4  pt-3  font-semibold font-sans flex cursor-pointer w-fit ">
         {title}
         <span className="absolute right-4 ">
           {repo ? (
@@ -70,6 +71,9 @@ const Projects = (props) => {
       <div className="absolute bottom-0 opacity-0 left-4  duration-300  text-xl text-white">
         <h4 className="text-base ">Created using:</h4>
         {resDesctription}
+      </div>
+      <div className="absolute top-16 opacity-0 left-4 pr-4  duration-300 text-white text-base  ">
+        {hover_description}
       </div>
     </div>
   );

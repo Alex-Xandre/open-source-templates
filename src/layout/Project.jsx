@@ -26,6 +26,7 @@ const Project = () => {
                   >
                     <Projects
                       banner={x.banner}
+                      hover_description={x.hover_description}
                       title={x.title}
                       description={x.description}
                       repo={x?.repo}

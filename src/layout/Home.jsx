@@ -93,6 +93,7 @@ const Home = () => {
                   key={index}
                 >
                   <Projects
+                   hover_description={x.hover_description}
                     banner={x.banner}
                     title={x.title}
                     description={x.description}

@@ -15,7 +15,10 @@ const Experience = () => {
         <div className="lg:mt-24 mt-10 flex flex-wrap mx-2 lg:mx-2">
           <TitleDescription title="    Hello ! Here are my timeline and experience for the past few years." />
         </div>
-        <div className="py-3 sm:mx-4  px-1 sm:px-0 -mt-5   md:mt-0 lg:mt-10">
+        <motion.div   initial={{ opacity: 0}}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.5, duration: 0.25 }}
+         className="py-3 sm:mx-4  px-1 sm:px-0 -mt-5   md:mt-0 lg:mt-10">
           <div className="relative text-gray-700 antialiased text-sm font-semibold">
             <div className="hidden sm:block w-[1px] bg-indigo-400 absolute h-full left-1/2 transform -translate-x-1/2"></div>
 
@@ -52,7 +55,7 @@ const Experience = () => {
               );
             })}
           </div>
-        </div>
+        </motion.div>
       </section>
     </div>
   );
